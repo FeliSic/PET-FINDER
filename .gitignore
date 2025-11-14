@@ -1,0 +1,10 @@
+node_modules/
+be-dist/
+.env
+.env.local
+dist/
+build/
+*.log
+test_output.log
+.parcel-cache
+.github

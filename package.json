@@ -1,0 +1,50 @@
+{
+  "name": "desafio",
+  "version": "1.0.0",
+  "license": "MIT",
+  "scripts": {
+    "dev:be": "tsx ./be-src/server.ts",
+    "dev:fe": "parcel serve ./fe-src/index.html",
+    "build:be": "tsc",
+    "build:fe": "parcel build ./fe-src",
+    "build": "yarn build:be && yarn build:fe",
+    "start": "node ./be-dist/server.js",
+    "test": "mocha --require ts-node/register be-src/**/*.test.ts --timeout 10000",
+    "test:watch": "mocha --require ts-node/register be-src/**/*.test.ts --watch --timeout 10000"
+  },
+  "dependencies": {
+    "@types/dropzone": "^5.7.9",
+    "@types/jsonwebtoken": "^9.0.10",
+    "@types/leaflet": "^1.9.21",
+    "@vaadin/router": "^2.0.0",
+    "cloudinary": "^2.8.0",
+    "cors": "^2.8.5",
+    "crypto": "^1.0.1",
+    "dotenv": "^17.2.3",
+    "dropzone": "^6.0.0-beta.2",
+    "express": "^5.1.0",
+    "ioredis": "^5.8.2",
+    "jwt": "^0.2.0",
+    "jwt-decode": "^4.0.0",
+    "leaflet": "^1.9.4",
+    "mapbox-gl": "^3.16.0",
+    "mocha": "^11.7.5",
+    "parcel": "^2.16.0",
+    "pg": "^8.16.3",
+    "pg-hstore": "^2.3.4",
+    "resend": "^6.3.0",
+    "sequelize": "^6.37.7"
+  },
+  "devDependencies": {
+    "@types/express": "^5.0.3",
+    "@types/mocha": "^10.0.6",
+    "@types/node": "^20.10.6",
+    "assert": "^2.1.0",
+    "chai": "^4.3.10",
+    "console-browserify": "^1.2.0",
+    "process": "^0.11.10",
+    "ts-node": "^10.9.2",
+    "typescript": "^5.3.3",
+    "util": "^0.12.5"
+  }
+}
