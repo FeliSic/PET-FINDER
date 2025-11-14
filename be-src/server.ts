@@ -7,6 +7,7 @@ import crypto from 'crypto';
 import { Request, Response } from 'express';
 import { createUser, loginUser, createPet, getUser, createReport } from './controllers/allController';
 import { User, Pet, Report } from './models/models';
+import path from 'path';
 
 
 const app = express();
@@ -330,6 +331,11 @@ function calculateDistance(lat1: number, lng1: number, lat2: number, lng2: numbe
 function toRad(deg: number): number {
   return deg * (Math.PI / 180);
 }
+
+// ============================================
+// Servir archivos estáticos del frontend
+// ============================================
+app.use(express.static(path.join(__dirname, '../fe-src')));
 
 // ============================================
 // Sincronizar DB e iniciar servidor
