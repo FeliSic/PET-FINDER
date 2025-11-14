@@ -69,7 +69,7 @@ class Changepass extends HTMLElement {
         const confirmarContraseña = this.querySelector('.confirmContraseña') as HTMLInputElement;
         console.log('User ID:', userId);
         try {
-          const response = await fetch(`http://localhost:3000/profilePassword/${userId}`, {
+          const response = await fetch(`https://pet-finder-dedt.onrender.com/profilePassword/${userId}`, {
             method: 'PUT',
             headers: { 'Content-Type': 'application/json' },
             body: JSON.stringify({ contraseña: contraseña.value, confirmarContraseña: confirmarContraseña.value }),

@@ -325,7 +325,7 @@ class CreateReport extends HTMLElement {
       };
 
       try {
-        const response = await fetch('http://localhost:3000/post-pets', {
+        const response = await fetch('https://pet-finder-dedt.onrender.com/post-pets', {
           method: 'POST',
           headers: {
             'Content-Type': 'application/json'

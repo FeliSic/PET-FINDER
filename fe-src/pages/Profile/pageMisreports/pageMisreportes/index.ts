@@ -20,7 +20,7 @@ class MyReports extends HTMLElement {
 
   async fetchMyReports(userId: string | null) {
     try {
-      const response = await fetch(`http://localhost:3000/profile/${userId}`);
+      const response = await fetch(`https://pet-finder-dedt.onrender.com/profile/${userId}`);
       if (!response.ok) throw new Error('Error al obtener mis reportes');
       return await response.json();
     } catch (error) {
@@ -190,7 +190,7 @@ class MyReports extends HTMLElement {
         button.disabled = true;
 
         try {
-          const response = await fetch(`http://localhost:3000/pet-status/${reportId}`, {
+          const response = await fetch(`https://pet-finder-dedt.onrender.com/pet-status/${reportId}`, {
             method: 'PUT',
             headers: { 'Content-Type': 'application/json' },
             body: JSON.stringify({ status: newStatus })

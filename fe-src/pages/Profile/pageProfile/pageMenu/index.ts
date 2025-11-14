@@ -7,7 +7,7 @@ class Menu extends HTMLElement {
 
   async fetchUserData(userId:  string | null) {
     try {
-      const response = await fetch(`http://localhost:3000/profile/${userId}`, {
+      const response = await fetch(`https://pet-finder-dedt.onrender.com/profile/${userId}`, {
         method: 'GET',
         headers: {
           'Content-Type': 'application/json',

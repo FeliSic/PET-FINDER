@@ -32,7 +32,7 @@ class PetsComponent extends HTMLElement {
     }
 
     try {
-      const res = await fetch('http://localhost:3000/nearby-pets', {
+      const res = await fetch('https://pet-finder-dedt.onrender.com/nearby-pets', {
         method: 'POST',
         headers: { 'Content-Type': 'application/json' },
         body: JSON.stringify({ lat, lng, radius: 5 }) // 5km de radio
@@ -192,7 +192,7 @@ class PetsComponent extends HTMLElement {
       submitButton.disabled = true;
 
       try {
-        const res = await fetch(`http://localhost:3000/report/${petId}`, {
+        const res = await fetch(`https://pet-finder-dedt.onrender.com/report/${petId}`, {
           method: 'POST',
           headers: { 'Content-Type': 'application/json' },
           body: JSON.stringify({ 

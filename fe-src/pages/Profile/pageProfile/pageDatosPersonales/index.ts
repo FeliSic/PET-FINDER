@@ -15,7 +15,7 @@ class Datos extends HTMLElement {
 
   async fetchUserData(userId: string | null) {
     try {
-      const response = await fetch(`http://localhost:3000/profile/${userId}`, {
+      const response = await fetch(`https://pet-finder-dedt.onrender.com/profile/${userId}`, {
         method: 'GET',
         headers: {
           'Content-Type': 'application/json',
@@ -277,7 +277,7 @@ class Datos extends HTMLElement {
       successMessage.style.display = 'none';
 
       try {
-        const response = await fetch(`http://localhost:3000/profileDate/${userId}`, {
+        const response = await fetch(`https://pet-finder-dedt.onrender.com/profileDate/${userId}`, {
           method: 'PUT',
           headers: { 'Content-Type': 'application/json' },
           body: JSON.stringify(updateData),

@@ -335,7 +335,7 @@ function toRad(deg: number): number {
 // ============================================
 // Servir archivos estáticos del frontend
 // ============================================
-app.use(express.static(path.join(__dirname, '../fe-dist/index.html')));
+app.use(express.static(path.join(__dirname, '../fe-dist/')));
 
 // ============================================
 // Sincronizar DB e iniciar servidor
