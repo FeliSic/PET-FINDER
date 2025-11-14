@@ -11,7 +11,7 @@
     "build:be": "tsc",
     "build:fe": "parcel build ./fe-src/index.html --dist-dir fe-dist",
     "dev:build": "yarn build:be && yarn build:fe",
-    "build": "yarn install && yarn build:be && yarn build:fe",
+    "build": "yarn install && yarn build:be",
     "start": "node ./be-dist/server.js",
     "test": "mocha --require ts-node/register be-src/**/*.test.ts --timeout 30000",
     "test:watch": "mocha --require ts-node/register be-src/**/*.test.ts --watch --timeout 30000"
