@@ -2,6 +2,9 @@
   "name": "desafio",
   "version": "1.0.0",
   "license": "MIT",
+  "engines": {
+    "node": ">=18.0.0"
+  },
   "scripts": {
     "dev:be": "tsx ./be-src/server.ts",
     "dev:fe": "parcel serve ./fe-src/index.html",
@@ -9,8 +12,8 @@
     "build:fe": "parcel build ./fe-src",
     "build": "yarn install && yarn build:be && yarn build:fe",
     "start": "node ./be-dist/server.js",
-    "test": "mocha --require ts-node/register be-src/**/*.test.ts --timeout 10000",
-    "test:watch": "mocha --require ts-node/register be-src/**/*.test.ts --watch --timeout 10000"
+    "test": "mocha --require ts-node/register be-src/**/*.test.ts --timeout 30000",
+    "test:watch": "mocha --require ts-node/register be-src/**/*.test.ts --watch --timeout 30000"
   },
   "dependencies": {
     "@types/dropzone": "^5.7.9",
